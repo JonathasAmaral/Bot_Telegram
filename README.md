@@ -1,7 +1,7 @@
 
-# Telegram Bot - Aplicação de Vagas para o Time FURIA
+# Telegram Bot
 
-Este projeto é um bot do Telegram desenvolvido com o objetivo de auxiliar no processo de aplicação de vagas para o time **FURIA**. A solução foi projetada para ser simples, eficiente e de alto desempenho.
+Este projeto é um bot do Telegram desenvolvido com o objetivo de auxiliar no processo de aplicação da vaga para o time **FURIA**. A solução foi projetada para ser simples, eficiente e de alto desempenho.
 
 ## 🚀 Tecnologias e Ferramentas Utilizadas
 
@@ -10,8 +10,6 @@ Este projeto é um bot do Telegram desenvolvido com o objetivo de auxiliar no pr
 
 ### Bibliotecas
 - **[python-telegram-bot](https://python-telegram-bot.org/)**: Biblioteca oficial do Telegram para bots em Python.
-  
-- **[Aiogram](https://docs.aiogram.dev/)**: Framework assíncrono para bots do Telegram.
   
 - **[FastAPI](https://fastapi.tiangolo.com/)**: Framework web de alto desempenho, utilizado em conjunto com:
   - **Uvicorn**: Servidor ASGI.
@@ -54,7 +52,7 @@ Para configurar o bot, é necessário obter uma chave API do Telegram. Siga os p
 2. Abra um terminal ou prompt de comando e execute o seguinte comando para clonar o repositório:
 
 ```bash
-git clone https://github.com/JonathasAmaral/Telegram-BOT.git
+git clone https://github.com/JonathasAmaral/Bot_Telegram.git
 ```
 
 3. Acesse o diretório do projeto:
