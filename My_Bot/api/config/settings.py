@@ -9,9 +9,7 @@ DEBUG = False
 
 # URLs para serviços externos
 URLS = {
-    "equipe": "https://draft5.gg/equipe/330-FURIA",
-    "campeonatos": "https://draft5.gg/equipe/330-FURIA/campeonatos",
-    "resultados": "https://draft5.gg/equipe/330-FURIA/resultados",
-    "proximos_jogos": "https://draft5.gg/equipe/330-FURIA/proximas-partidas",
-    "loja": "https://www.furia.gg"
+    "loja": "https://www.furia.gg",
+    "csgo": "https://www.hltv.org/team/8297/furia",
+    "valorant": "https://www.vlr.gg/team/2406/furia"
 }

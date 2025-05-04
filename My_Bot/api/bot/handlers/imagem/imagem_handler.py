@@ -2,9 +2,10 @@ from telegram import Update
 from telegram.ext import ContextTypes
 from pathlib import Path
 from ....config import logger
-from ...utils import create_keyboard, send_or_edit_message
+from ...utils import create_keyboard, send_message, send_or_edit_message, send_image
 
-IMAGES_DIR = Path(__file__).resolve().parent.parent.parent / "assets" / "images"
+# Updated path to point to the correct images directory
+IMAGES_DIR = Path(__file__).resolve().parent.parent.parent.parent / "assets" / "images"
 
 IMAGE_PATHS = {
     "time": IMAGES_DIR / "time.jpg",
@@ -16,6 +17,7 @@ IMAGE_PATHS = {
 def ensure_images_dir():
     """Garante que o diretório de imagens exista"""
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+    logger.info(f"Images directory path: {IMAGES_DIR}")
 
 async def cmd_imagem(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handler para o comando /imagem - mostra opções de imagens"""
@@ -34,12 +36,8 @@ async def show_imagens_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ],
         ("🔙 Voltar ao Menu", "start")
     ])
-    
-    await send_or_edit_message(
-        update,
-        context,
-        "🖼️ <b>Imagens FURIA</b>\n\n"
-        "Escolha uma opção para ver imagens da FURIA:",
-        keyboard,
-        parse_mode="HTML"
-    )
+
+    message = "🖼️ <b>Imagens FURIA</b>\n\n" \
+             "Escolha uma opção para ver imagens da FURIA:"
+
+    await send_or_edit_message(update, context, message, keyboard, parse_mode="HTML")

@@ -14,7 +14,7 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, use
     
     keyboard = create_keyboard([
         ("🛒 Loja", "loja"),
-        ("🎮 Campeonatos", "campeonatos"),
+        ("🎮 FURIA", "furia"),
         ("🖼️ Imagens", "imagens"),
         ("ℹ️ Sobre", "sobre")
     ])
@@ -23,7 +23,7 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, use
         update,
         context,
         f"Olá, {user_name}! 👋\n\n"
-        "Bem-vindo ao Bot da FURIA! 🦁\n\n"
+        "Bem-vindo ao Bot da FURIA! \n\n"
         "Escolha uma opção abaixo:",
         keyboard
     )

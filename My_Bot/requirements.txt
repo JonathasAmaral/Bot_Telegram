@@ -12,18 +12,17 @@ websockets==15.0.1
 # --- Telegram Bot ---
 python-telegram-bot==20.7
 
+# --- Web Scraping e HTTP ---
+aiohttp==3.9.3
+beautifulsoup4==4.12.3
+requests==2.31.0
+lxml==5.4.0
+
 # --- Validação e Tipagem ---
 annotated-types==0.7.0
 pydantic==2.11.4
 pydantic_core==2.33.2
-typing-inspection==0.4.0
 typing_extensions==4.13.2
-
-# --- Web Scraping e HTTP ---
-aiohttp==3.9.3
-beautifulsoup4==4.12.3
-bs4==0.0.1  # Alias para beautifulsoup4
-requests==2.31.0
 
 # --- Utilitários e Outras Dependências ---
 click==8.1.8

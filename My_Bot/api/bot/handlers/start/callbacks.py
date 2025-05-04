@@ -34,8 +34,8 @@ async def callback_sobre(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "ℹ️ <b>Sobre o Bot da FURIA</b>\n\n"
         "Este bot foi desenvolvido para os fãs da FURIA acompanharem as novidades, "
         "campeonatos e terem acesso a conteúdos exclusivos do time.\n\n"
-        "<b>Versão:</b> 1.0.0\n"
-        "<b>Desenvolvido por:</b> Equipe FURIA",
+        "<b>Versão:</b> 3.7.7\n"
+        "<b>Desenvolvido por:</b> Jonathas ",
         keyboard,
         parse_mode="HTML"
     )
