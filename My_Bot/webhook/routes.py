@@ -1,17 +1,33 @@
 from fastapi import APIRouter, Request, Response, HTTPException
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from telegram import Update
 from telegram.ext import Application
 from .app_state import get_application
+import os
+from pathlib import Path
 
 router = APIRouter()
 
+# Caminho base para a pasta My_Bot
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Rota para servir arquivos estáticos
+@router.get("/api/assets/{folder}/{subfolder}/{filename}")
+async def serve_assets(folder: str, subfolder: str, filename: str):
+
+    file_path = BASE_DIR / "api" / "assets" / folder / subfolder / filename
+    if os.path.exists(file_path):
+        return FileResponse(file_path)
+    raise HTTPException(status_code=404, detail=f"Asset not found: {filename}")
+
 @router.post("/api/webhook")
 async def telegram_webhook(req: Request):
-    # Get application instance from state management
+    # Get the application instance
     application = get_application()
     if not application:
         raise HTTPException(status_code=503, detail="Bot application not initialized")
-    
+
     # Process Telegram update
     data = await req.json()
     update = Update.de_json(data, application.bot)
