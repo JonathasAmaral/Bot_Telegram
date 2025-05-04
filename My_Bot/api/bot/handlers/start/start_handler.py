@@ -4,11 +4,11 @@ from ....config import logger
 from ...utils import create_keyboard, send_or_edit_message
 
 async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handler para o comando /start - mostra o menu principal"""
+    
     await show_main_menu(update, context)
 
 async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, user_name=None):
-    """Mostra o menu principal do bot"""
+
     if user_name is None:
         user_name = update.message.from_user.first_name if update.message else update.callback_query.from_user.first_name
     
@@ -16,6 +16,7 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, use
         ("🛒 Loja", "loja"),
         ("🎮 FURIA", "furia"),
         ("🖼️ Imagens", "imagens"),
+        ("💳 Carteira de Fã", "fan_wallet"),
         ("ℹ️ Sobre", "sobre")
     ])
     

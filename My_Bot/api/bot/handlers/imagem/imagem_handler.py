@@ -15,16 +15,16 @@ IMAGE_PATHS = {
 }
 
 def ensure_images_dir():
-    """Garante que o diretório de imagens exista"""
+    # Garante que o diretório de imagens exista
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     logger.info(f"Images directory path: {IMAGES_DIR}")
 
 async def cmd_imagem(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handler para o comando /imagem - mostra opções de imagens"""
+
     await show_imagens_menu(update, context)
 
 async def show_imagens_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Mostra o menu de imagens"""
+    # Mostra o menu de imagens"""
     ensure_images_dir()
     
     keyboard = create_keyboard([

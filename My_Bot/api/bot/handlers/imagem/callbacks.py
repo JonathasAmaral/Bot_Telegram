@@ -5,11 +5,11 @@ from ...utils import create_keyboard, send_or_edit_message
 from .imagem_handler import IMAGE_PATHS, show_imagens_menu
 
 async def callback_imagens(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handler para o callback de imagens"""
+
     await show_imagens_menu(update, context)
 
 async def _handle_imagem(update: Update, context: ContextTypes.DEFAULT_TYPE, image_type: str, title: str, emoji: str):
-    """Função auxiliar para manipular envio de imagens"""
+    # Função auxiliar para manipular envio de imagens
     image_path = IMAGE_PATHS[image_type]
     logger.info(f"Attempting to send image from path: {image_path}")
     
@@ -50,17 +50,17 @@ async def _handle_imagem(update: Update, context: ContextTypes.DEFAULT_TYPE, ima
 
 # Callback handlers for each image type
 async def callback_imagem_time(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handler para o callback de imagem do time"""
+ 
     await _handle_imagem(update, context, "time", "Time FURIA", "👥")
 
 async def callback_imagem_logo(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handler para o callback de logo"""
+   
     await _handle_imagem(update, context, "logo", "Logo FURIA", "🎭")
 
 async def callback_imagem_mobile(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handler para o callback de wallpaper para celular"""
+  
     await _handle_imagem(update, context, "wallpaper_mobile", "Wallpaper Mobile FURIA", "📱")
 
 async def callback_imagem_desktop(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handler para o callback de wallpaper para desktop"""
+    
     await _handle_imagem(update, context, "wallpaper_desktop", "Wallpaper Desktop FURIA", "💻")

@@ -11,16 +11,15 @@ BASE_DATA_PATH = Path(__file__).resolve().parent.parent.parent.parent / "local_d
 logger.info(f"Diretório base de dados: {BASE_DATA_PATH}")
 
 class JsonDataReader:
-    """Utility class for reading data from local JSON files"""
     
     def __init__(self):
         # Initialize cache for storing loaded data
         self.cache = {}
         
     def _normalize_game_name(self, game: str) -> str:
-        """Normalize game name for file path and cache consistency"""
+        # Normalize game name for file path and cache consistency
         game_lower = game.lower()
-        # Handle special cases
+        
         if game_lower == "cs:go" or game_lower == "cs2" or game_lower == "counter-strike 2":
             return "csgo"
         if game_lower == "league of legends":
@@ -39,7 +38,7 @@ class JsonDataReader:
         return game_lower.replace(":", "").replace(" ", "")
         
     def _get_file_path(self, game: str, data_type: str) -> Path:
-        """Get the path for a specific game and data type JSON file"""
+        # Get the path for a specific game and data type JSON file
         normalized_game = self._normalize_game_name(game)
         filename = f"{normalized_game}_{data_type}.json"
         file_path = BASE_DATA_PATH / normalized_game / filename
@@ -47,7 +46,7 @@ class JsonDataReader:
         return file_path
         
     def _load_json_file(self, file_path: Path) -> Any:
-        """Load data from a JSON file"""
+
         if not file_path.exists():
             logger.error(f"JSON file not found: {file_path}")
             return None
@@ -65,7 +64,7 @@ class JsonDataReader:
             return None
     
     def _get_cached_or_load(self, game: str, data_type: str) -> Any:
-        """Get data from cache or load it from file"""
+        # Get data from cache or load it from file"""
         normalized_game = self._normalize_game_name(game)
         cache_key = f"{normalized_game}_{data_type}"
         logger.info(f"Buscando dados para cache_key: {cache_key}")
@@ -87,7 +86,7 @@ class JsonDataReader:
         return data
     
     def get_team_info(self, game: str) -> Dict[str, Any]:
-        """Get team information for a specific game"""
+        # Get team information for a specific game
         data = self._get_cached_or_load(game, "team")
         if not data:
             # Return default values if file not found
@@ -101,35 +100,34 @@ class JsonDataReader:
         return data
     
     def get_players(self, game: str) -> List[Dict[str, str]]:
-        """Get players list for a specific game"""
+
         data = self._get_cached_or_load(game, "players")
         if not data:
             return []
         return data
     
     def get_upcoming_matches(self, game: str) -> List[Dict[str, str]]:
-        """Get upcoming matches for a specific game"""
+
         data = self._get_cached_or_load(game, "upcoming_matches")
         if not data:
             return []
         return data
     
     def get_past_matches(self, game: str) -> List[Dict[str, str]]:
-        """Get past match results for a specific game"""
+
         data = self._get_cached_or_load(game, "past_matches")
         if not data:
             return []
         return data
     
     def get_tournaments(self, game: str) -> List[Dict[str, str]]:
-        """Get tournaments information for a specific game"""
         data = self._get_cached_or_load(game, "tournaments")
         if not data:
             return []
         return data
     
     def get_supported_games(self) -> List[str]:
-        """Get list of supported games by checking available subfolders"""
+        # Get list of supported games by checking available subfolders"""
         # Return the specific list of games requested
         return [
             "Counter-Strike 2",
@@ -144,7 +142,7 @@ class JsonDataReader:
         ]
     
     def clear_cache(self, game: Optional[str] = None):
-        """Clear cache for a specific game or all games"""
+        
         if game:
             # Clear cache for specific game
             normalized_game = self._normalize_game_name(game)
@@ -152,7 +150,7 @@ class JsonDataReader:
                 if key.startswith(normalized_game):
                     del self.cache[key]
         else:
-            # Clear all cache
+    
             self.cache = {}
 
 # Create a single instance to be used throughout the application

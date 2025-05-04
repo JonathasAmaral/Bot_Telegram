@@ -6,23 +6,26 @@ from .handlers.commands import register_handlers
 import os
 
 async def create_bot():
-    # Create the application instance
-    application = ApplicationBuilder().token(BOT_TOKEN).build()
+
+    application = ApplicationBuilder().token(BOT_TOKEN).updater(None).build()
     
     # Register command handlers
     register_handlers(application)
 
     # Configurar o menu de comandos botão de menu
     commands = [
-        BotCommand("start", "Iniciar o bot e mostrar o menu principal"),
-        BotCommand("furia", "Ver informações sobre jogos da FURIA"),
-        BotCommand("imagem", "Ver imagens e wallpapers da FURIA")
+        BotCommand("start", "menu principal"),
+        BotCommand("furia", "jogos da FURIA"),
+        BotCommand("imagem", "imagens e wallpapers"),
+        BotCommand("fan_wallet", "Carterinha de fãn")
     ]
     await application.bot.set_my_commands(commands)
     
     await application.bot.set_chat_menu_button(menu_button=MenuButtonCommands())
-
+    
+    # Initialize the application before returning it
     await application.initialize()
+    
     logger.info("Bot inicializado com sucesso")
     
     return application

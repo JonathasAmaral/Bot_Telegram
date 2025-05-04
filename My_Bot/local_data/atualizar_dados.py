@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Utilitário para atualizar os arquivos JSON locais
 Este script fornece uma interface interativa para atualizar 

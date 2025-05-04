@@ -1,30 +1,39 @@
 # --- FastAPI e ASGI ---
-anyio==4.9.0
-fastapi==0.115.12
-h11==0.16.0
-httptools==0.6.4
-sniffio==1.3.1
-starlette==0.46.2
-uvicorn==0.34.2
-watchfiles==1.0.5
-websockets==15.0.1
+anyio>=4.0.0
+fastapi>=0.100.0,<0.116.0
+h11>=0.14.0
+httptools>=0.6.0
+sniffio>=1.3.0
+starlette>=0.30.0
+uvicorn>=0.23.0
+watchfiles>=0.20.0
+websockets>=11.0.0
 
 # --- Telegram Bot ---
 python-telegram-bot==20.7
+tornado>=6.3.3
 
 # --- HTTP e API ---
-aiohttp==3.9.3
-requests==2.31.0
+aiohttp>=3.8.0
+requests>=2.30.0
+httpx>=0.24.0,<0.26.0  # Versão compatível com python-telegram-bot 20.7
 
 # --- Validação e Tipagem ---
-annotated-types==0.7.0
-pydantic==2.11.4
-pydantic_core==2.33.2
-typing_extensions==4.13.2
+annotated-types>=0.5.0
+pydantic>=2.0.0,<3.0.0
+typing_extensions>=4.5.0
+
+# --- Processamento de Imagem e PDF ---
+Pillow==10.4.0  # Versão compatível com Python 3.13
+qrcode>=7.0.0
+reportlab>=4.0.0
 
 # --- Utilitários e Outras Dependências ---
-click==8.1.8
-colorama==0.4.6
-idna==3.10
-python-dotenv==1.1.0
-PyYAML==6.0.2
+click>=8.0.0
+colorama>=0.4.5
+idna>=3.0
+python-dotenv>=1.0.0
+PyYAML>=6.0.0
+
+# --- Adicionando dependências para os recursos de imagem e carteira de fã ---
+python-dateutil>=2.8.2

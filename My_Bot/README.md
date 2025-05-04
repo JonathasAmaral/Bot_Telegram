@@ -12,7 +12,10 @@ Bot oficial da FURIA para Telegram, com informações sobre campeonatos, resulta
   - Jogos futuros
   - Resumo da equipe
 - 🖼️ **/imagem** - Imagens do time, logo e wallpapers
-- 💰 **/fan_wallet** - Informações sobre a carteira de fãs
+- 💳 **/fan_wallet** - Carteira digital personalizada de fã
+  - Gere sua carteira de fã com seus dados
+  - Disponível em formato PNG e PDF
+  - Inclui QR Code para verificação
 
 ## Tecnologias Utilizadas
 
@@ -21,6 +24,9 @@ Bot oficial da FURIA para Telegram, com informações sobre campeonatos, resulta
 - [Requests](https://requests.readthedocs.io/) - Biblioteca para requisições HTTP
 - [aiohttp](https://docs.aiohttp.org/) - Cliente HTTP assíncrono
 - [Uvicorn](https://www.uvicorn.org/) - Servidor ASGI para FastAPI
+- [Pillow](https://python-pillow.org/) - Manipulação de imagens
+- [ReportLab](https://www.reportlab.com/) - Geração de documentos PDF
+- [qrcode](https://github.com/lincolnloop/python-qrcode) - Geração de QR Codes
 - [Vercel](https://vercel.com/) - Deploy e hospedagem
 - [JSON](https://www.json.org/) - Armazenamento de dados local
 - [Pydantic](https://docs.pydantic.dev/) - Validação de dados e configurações
@@ -111,7 +117,8 @@ Esses testes verificam se os dados dos jogos estão sendo carregados corretament
 My_Bot/
 ├── api/
 │   ├── assets/
-│   │   └── images/        # Imagens usadas pelo bot
+│   │   ├── images/        # Imagens usadas pelo bot
+│   │   └── fan_wallet/    # Templates para carteira de fã
 │   ├── bot/
 │   │   ├── handlers/      # Handlers para comandos e callbacks
 │   │   │   ├── commands.py
@@ -122,9 +129,8 @@ My_Bot/
 │   │   └── utils/         # Utilitários
 │   │       ├── keyboard.py
 │   │       ├── leitor_json.py  # Leitor de dados em JSON
+│   │       ├── fan_wallet_generator.py # Gerador de carteira de fã
 │   │       └── message.py
-│   ├── config/            # Configurações
-│   │   └── settings.py
 ├── local_data/            # Dados locais em JSON
 │   ├── data/              # Pasta com dados organizados por jogo
 │   │   ├── apexlegends/   # Apex Legends

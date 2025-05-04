@@ -37,7 +37,7 @@ async def show_games_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def show_game_options(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
-    """Mostra o menu de opções para um jogo específico"""
+    # Mostra o menu de opções para um jogo específico
     keyboard = create_keyboard([
         ("📋 Informações gerais", f"furia_info_{game}"),
         ("👥 Lista de jogadores", f"furia_players_{game}"),
@@ -58,7 +58,7 @@ async def show_game_options(update: Update, context: ContextTypes.DEFAULT_TYPE, 
     )
 
 async def show_team_info(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
-    """Mostra informações gerais do time para um jogo específico"""
+
     logger.info(f"Buscando informações do time para o jogo: {game}")
     info = json_reader.get_team_info(game)
     logger.info(f"Informações obtidas: {info}")
@@ -87,7 +87,7 @@ async def show_team_info(update: Update, context: ContextTypes.DEFAULT_TYPE, gam
     )
 
 async def show_players(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
-    """Mostra a lista de jogadores para um jogo específico"""
+
     logger.info(f"Buscando lista de jogadores para o jogo: {game}")
     players = json_reader.get_players(game)
     logger.info(f"Jogadores encontrados: {len(players) if players else 0}")
@@ -117,7 +117,7 @@ async def show_players(update: Update, context: ContextTypes.DEFAULT_TYPE, game:
     )
 
 async def show_upcoming_matches(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
-    """Mostra os próximos jogos para um jogo específico"""
+    # Mostra os próximos jogos para um jogo específico
     matches = json_reader.get_upcoming_matches(game)
     
     if not matches:
@@ -146,7 +146,7 @@ async def show_upcoming_matches(update: Update, context: ContextTypes.DEFAULT_TY
     )
 
 async def show_recent_results(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
-    """Mostra os resultados recentes para um jogo específico"""
+    # resultados recentes para um jogo específico
     results = json_reader.get_past_matches(game)
     
     if not results:
@@ -175,7 +175,7 @@ async def show_recent_results(update: Update, context: ContextTypes.DEFAULT_TYPE
     )
 
 async def show_recent_tournaments(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
-    """Mostra os torneios recentes para um jogo específico"""
+
     tournaments = json_reader.get_tournaments(game)
     
     if not tournaments:

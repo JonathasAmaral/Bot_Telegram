@@ -1,8 +1,8 @@
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 
 def create_keyboard(buttons):
-    """Cria um teclado inline a partir de uma lista de botões
-    buttons: lista de tuplas (texto, callback_data ou url)"""
+    #Cria um teclado inline a partir de uma lista de botões
+    # buttons: lista de tuplas (texto, callback_data ou url)
     keyboard = []
     for row in buttons:
         if isinstance(row, tuple):
@@ -18,5 +18,5 @@ def create_keyboard(buttons):
     return InlineKeyboardMarkup(keyboard)
 
 def create_back_button(callback_data="start"):
-    """Cria um teclado com apenas o botão de voltar"""
+    # Cria um teclado com apenas o botão de voltar
     return create_keyboard([("🔙 Voltar ao Menu", callback_data)])
