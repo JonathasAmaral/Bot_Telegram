@@ -1,0 +1,34 @@
+[
+    {
+        "nickname": "Rustyzera",
+        "name": "José Carlos",
+        "nationality": "Brazil",
+        "role": "IGL/Entry",
+        "joined_date": "2021-05-10",
+        "image_url": "https://example.com/player_images/rustyzera.jpg"
+    },
+    {
+        "nickname": "killdemo",
+        "name": "Gabriel Freitas",
+        "nationality": "Brazil",
+        "role": "Support",
+        "joined_date": "2022-02-15",
+        "image_url": "https://example.com/player_images/killdemo.jpg"
+    },
+    {
+        "nickname": "mafios",
+        "name": "Carlos Eduardo",
+        "nationality": "Brazil",
+        "role": "Fragger",
+        "joined_date": "2022-06-01",
+        "image_url": "https://example.com/player_images/mafios.jpg"
+    },
+    {
+        "nickname": "HunteriK",
+        "name": "Paulo Silva",
+        "nationality": "Brazil",
+        "role": "Scout",
+        "joined_date": "2023-01-20",
+        "image_url": "https://example.com/player_images/hunterik.jpg"
+    }
+]

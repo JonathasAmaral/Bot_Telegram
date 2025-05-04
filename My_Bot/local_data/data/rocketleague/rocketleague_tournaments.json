@@ -1,0 +1,23 @@
+[
+    {
+        "name": "RLCS 2024-25 World Championship",
+        "date": "2025-03-10 to 2025-03-17",
+        "prize_pool": "$2,000,000",
+        "location": "Los Angeles, USA",
+        "placement": "Top 8"
+    },
+    {
+        "name": "RLCS 2024-25 - South American Major",
+        "date": "2025-02-05 to 2025-02-10",
+        "prize_pool": "$300,000",
+        "location": "São Paulo, Brazil",
+        "placement": "1st Place"
+    },
+    {
+        "name": "RLCS 2024-25 - South American Regional 3",
+        "date": "2025-01-10 to 2025-01-12",
+        "prize_pool": "$100,000",
+        "location": "Online",
+        "placement": "1st Place"
+    }
+]

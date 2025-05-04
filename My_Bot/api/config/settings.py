@@ -1,4 +1,5 @@
 import logging
+import os
 
 logger = logging.getLogger("telegram-bot")
 
@@ -13,3 +14,12 @@ URLS = {
     "csgo": "https://www.hltv.org/team/8297/furia",
     "valorant": "https://www.vlr.gg/team/2406/furia"
 }
+
+# Team IDs for FURIA
+FURIA_TEAM_IDS = {
+    "csgo": "3237",  # FURIA CS:GO team ID
+    "valorant": "3512"  # FURIA Valorant team ID  
+}
+
+# Cache settings
+CACHE_TTL = 300  # 5 minutes cache

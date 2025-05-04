@@ -1,0 +1,23 @@
+[
+    {
+        "name": "PUBG Global Championship 2025",
+        "date": "2025-03-25 to 2025-04-10",
+        "prize_pool": "$2,500,000",
+        "location": "Bangkok, Thailand",
+        "placement": "6th Place"
+    },
+    {
+        "name": "Americas Championship 2024",
+        "date": "2024-11-10 to 2024-11-17",
+        "prize_pool": "$250,000",
+        "location": "Mexico City, Mexico",
+        "placement": "1st Place"
+    },
+    {
+        "name": "PUBG Continental Series 7 - Americas",
+        "date": "2024-08-18 to 2024-09-01",
+        "prize_pool": "$150,000",
+        "location": "Online",
+        "placement": "2nd Place"
+    }
+]

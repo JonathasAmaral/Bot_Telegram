@@ -1,0 +1,57 @@
+[
+    {
+        "id": "101",
+        "name": "Andrei Piovezan",
+        "first_name": "Andrei",
+        "last_name": "Piovezan",
+        "nickname": "art",
+        "nationality": "BR",
+        "role": "Captain",
+        "age": "27",
+        "hometown": "São Paulo"
+    },
+    {
+        "id": "102",
+        "name": "Kaike Cerato",
+        "first_name": "Kaike",
+        "last_name": "Cerato",
+        "nickname": "KSCERATO",
+        "nationality": "BR",
+        "role": "Rifler",
+        "age": "25",
+        "hometown": "Rio de Janeiro"
+    },
+    {
+        "id": "103",
+        "name": "Yuri Santos",
+        "first_name": "Yuri",
+        "last_name": "Santos",
+        "nickname": "yuurih",
+        "nationality": "BR",
+        "role": "Rifler",
+        "age": "24",
+        "hometown": "Santos"
+    },
+    {
+        "id": "104",
+        "name": "Gabriel Toledo",
+        "first_name": "Gabriel",
+        "last_name": "Toledo",
+        "nickname": "FalleN",
+        "nationality": "BR",
+        "role": "AWPer",
+        "age": "33",
+        "hometown": "Itararé"
+    },
+    {
+        "id": "105",
+        "name": "Rafael Costa",
+        "first_name": "Rafael",
+        "last_name": "Costa",
+        "nickname": "saffee",
+        "nationality": "BR",
+        "role": "Rifler",
+        "age": "28",
+        "hometown": "Porto Alegre"
+    }
+]

@@ -1,0 +1,57 @@
+[
+    {
+        "id": "201",
+        "name": "Douglas Lopes",
+        "first_name": "Douglas",
+        "last_name": "Lopes",
+        "nickname": "dgzin",
+        "nationality": "BR",
+        "role": "Duelist",
+        "age": "22",
+        "hometown": "São Paulo"
+    },
+    {
+        "id": "202",
+        "name": "Gabriel Henud",
+        "first_name": "Gabriel",
+        "last_name": "Henud",
+        "nickname": "qck",
+        "nationality": "BR",
+        "role": "Flex",
+        "age": "23",
+        "hometown": "Rio de Janeiro"
+    },
+    {
+        "id": "203",
+        "name": "Khalil Schmidt",
+        "first_name": "Khalil",
+        "last_name": "Schmidt",
+        "nickname": "Khalil",
+        "nationality": "BR",
+        "role": "Sentinel",
+        "age": "21",
+        "hometown": "Curitiba"
+    },
+    {
+        "id": "204",
+        "name": "Matheus Penteado",
+        "first_name": "Matheus",
+        "last_name": "Penteado",
+        "nickname": "Mazin",
+        "nationality": "BR",
+        "role": "Initiator",
+        "age": "21",
+        "hometown": "São Paulo"
+    },
+    {
+        "id": "205",
+        "name": "Agustin Ibarra",
+        "first_name": "Agustin",
+        "last_name": "Ibarra",
+        "nickname": "Nozwerr",
+        "nationality": "AR",
+        "role": "Controller",
+        "age": "19",
+        "hometown": "Buenos Aires"
+    }
+]

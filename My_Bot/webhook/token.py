@@ -56,7 +56,7 @@ def load_webhook_url():
     
     # Ensure the webhook URL ends with /api/webhook
     if webhook_url and not webhook_url.endswith("/api/webhook"):
-        webhook_url = webhook_url.rstrip("/") + "api/webhook"
+        webhook_url = webhook_url.rstrip("/") + "/api/webhook"
     
     return webhook_url
 

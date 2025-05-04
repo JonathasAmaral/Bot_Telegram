@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Six Invitational 2025",
+        "date": "2025-02-13 to 2025-02-25",
+        "prize_pool": "$3,000,000",
+        "location": "Montreal, Canada",
+        "placement": "5th-8th Place"
+    },
+    {
+        "name": "BR6 2024 - Stage 3",
+        "date": "2024-09-15 to 2024-11-20",
+        "prize_pool": "R$ 300,000",
+        "location": "São Paulo, Brazil",
+        "placement": "2nd Place"
+    },
+    {
+        "name": "Copa Elite Six 2024 - Stage 3",
+        "date": "2024-11-25 to 2024-12-05",
+        "prize_pool": "$200,000",
+        "location": "Mexico City, Mexico",
+        "placement": "3rd Place"
+    }
+]

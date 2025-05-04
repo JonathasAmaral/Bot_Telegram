@@ -1,0 +1,42 @@
+[
+    {
+        "nickname": "Fntzy",
+        "name": "Diogo Lima",
+        "nationality": "Brazil",
+        "role": "Entry Fragger",
+        "joined_date": "2021-11-01",
+        "image_url": "https://example.com/player_images/fntzy.jpg"
+    },
+    {
+        "nickname": "HandyY",
+        "name": "Gabriel Queiroz",
+        "nationality": "Brazil",
+        "role": "Support",
+        "joined_date": "2022-03-15",
+        "image_url": "https://example.com/player_images/handyy.jpg"
+    },
+    {
+        "nickname": "Jv92",
+        "name": "João Vitor Ferreira",
+        "nationality": "Brazil",
+        "role": "IGL",
+        "joined_date": "2022-09-20",
+        "image_url": "https://example.com/player_images/jv92.jpg"
+    },
+    {
+        "nickname": "Miracle",
+        "name": "André Pedrosa",
+        "nationality": "Brazil",
+        "role": "Secondary Entry",
+        "joined_date": "2023-12-05",
+        "image_url": "https://example.com/player_images/miracle.jpg"
+    },
+    {
+        "nickname": "Stk",
+        "name": "Gabriel Luiz",
+        "nationality": "Brazil",
+        "role": "Flex",
+        "joined_date": "2023-12-05",
+        "image_url": "https://example.com/player_images/stk.jpg"
+    }
+]

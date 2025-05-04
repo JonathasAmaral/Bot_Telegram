@@ -12,11 +12,9 @@ websockets==15.0.1
 # --- Telegram Bot ---
 python-telegram-bot==20.7
 
-# --- Web Scraping e HTTP ---
+# --- HTTP e API ---
 aiohttp==3.9.3
-beautifulsoup4==4.12.3
 requests==2.31.0
-lxml==5.4.0
 
 # --- Validação e Tipagem ---
 annotated-types==0.7.0

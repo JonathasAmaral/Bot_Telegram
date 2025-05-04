@@ -1,0 +1,23 @@
+[
+    {
+        "opponent": "TSM",
+        "event": "ALGS 2025-26 Pro League - NA",
+        "date": "2025-05-20",
+        "time": "18:00 EST",
+        "format": "6 matches"
+    },
+    {
+        "opponent": "NRG",
+        "event": "ALGS 2025-26 Pro League - NA",
+        "date": "2025-05-27",
+        "time": "19:00 EST",
+        "format": "6 matches"
+    },
+    {
+        "opponent": "Cloud9",
+        "event": "ALGS 2025-26 Pro League - NA",
+        "date": "2025-06-03",
+        "time": "18:00 EST",
+        "format": "6 matches"
+    }
+]

@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import ContextTypes
 from ....config import logger
-from ...utils import create_keyboard, send_or_edit_message, scraper
+from ...utils import create_keyboard, send_or_edit_message, json_reader
 
 async def cmd_furia(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handler para o comando /furia - mostra o menu de jogos da FURIA"""
@@ -9,7 +9,8 @@ async def cmd_furia(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def show_games_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Mostra o menu de jogos disponíveis da FURIA"""
-    games = await scraper.get_furia_games()
+    games = json_reader.get_supported_games()
+    logger.info(f"Jogos disponíveis: {games}")
     
     if not games:
         await send_or_edit_message(
@@ -58,10 +59,12 @@ async def show_game_options(update: Update, context: ContextTypes.DEFAULT_TYPE, 
 
 async def show_team_info(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
     """Mostra informações gerais do time para um jogo específico"""
-    info = await scraper.get_team_info(game)
+    logger.info(f"Buscando informações do time para o jogo: {game}")
+    info = json_reader.get_team_info(game)
+    logger.info(f"Informações obtidas: {info}")
     
-    if not info:
-        text = f"❌ Não foi possível obter informações da FURIA {game}."
+    if not info or (isinstance(info, dict) and all(v == "N/A" for k, v in info.items() if k != "name")):
+        text = f"❌ Informações para este jogo ainda não estão disponíveis. Tente novamente em breve!"
     else:
         text = (
             f"📋 <b>FURIA {game}</b>\n\n"
@@ -85,17 +88,19 @@ async def show_team_info(update: Update, context: ContextTypes.DEFAULT_TYPE, gam
 
 async def show_players(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
     """Mostra a lista de jogadores para um jogo específico"""
-    players = await scraper.get_team_players(game)
+    logger.info(f"Buscando lista de jogadores para o jogo: {game}")
+    players = json_reader.get_players(game)
+    logger.info(f"Jogadores encontrados: {len(players) if players else 0}")
     
     if not players:
-        text = f"❌ Não foi possível obter a lista de jogadores da FURIA {game}."
+        text = f"❌ Informações para este jogo ainda não estão disponíveis. Tente novamente em breve!"
     else:
         text = f"👥 <b>Jogadores FURIA {game}</b>\n\n"
         for player in players:
             text += (
                 f"🎮 <b>{player['nickname']}</b>\n"
                 f"👤 Nome: {player['name']}\n"
-                f"🌎 País: {player['country']}\n"
+                f"🌎 País: {player['nationality']}\n"
                 f"📋 Função: {player['role']}\n\n"
             )
     
@@ -113,10 +118,10 @@ async def show_players(update: Update, context: ContextTypes.DEFAULT_TYPE, game:
 
 async def show_upcoming_matches(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
     """Mostra os próximos jogos para um jogo específico"""
-    matches = await scraper.get_upcoming_matches(game)
+    matches = json_reader.get_upcoming_matches(game)
     
     if not matches:
-        text = f"❌ Não há próximos jogos agendados para FURIA {game}."
+        text = f"❌ Informações para este jogo ainda não estão disponíveis. Tente novamente em breve!"
     else:
         text = f"📆 <b>Próximos Jogos FURIA {game}</b>\n\n"
         for match in matches:
@@ -142,10 +147,10 @@ async def show_upcoming_matches(update: Update, context: ContextTypes.DEFAULT_TY
 
 async def show_recent_results(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
     """Mostra os resultados recentes para um jogo específico"""
-    results = await scraper.get_recent_results(game)
+    results = json_reader.get_past_matches(game)
     
     if not results:
-        text = f"❌ Não foi possível obter resultados recentes da FURIA {game}."
+        text = f"❌ Informações para este jogo ainda não estão disponíveis. Tente novamente em breve!"
     else:
         text = f"📈 <b>Últimos Resultados FURIA {game}</b>\n\n"
         for result in results:
@@ -171,10 +176,10 @@ async def show_recent_results(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 async def show_recent_tournaments(update: Update, context: ContextTypes.DEFAULT_TYPE, game: str):
     """Mostra os torneios recentes para um jogo específico"""
-    tournaments = await scraper.get_recent_tournaments(game)
+    tournaments = json_reader.get_tournaments(game)
     
     if not tournaments:
-        text = f"❌ Não foi possível obter torneios recentes da FURIA {game}."
+        text = f"❌ Informações para este jogo ainda não estão disponíveis. Tente novamente em breve!"
     else:
         text = f"🏆 <b>Torneios Recentes FURIA {game}</b>\n\n"
         for tournament in tournaments:

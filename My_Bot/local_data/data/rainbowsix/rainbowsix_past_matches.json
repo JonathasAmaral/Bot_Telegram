@@ -1,0 +1,30 @@
+[
+    {
+        "opponent": "NiP",
+        "event": "BR6 2025 - Stage 1",
+        "date": "2025-04-17",
+        "score": "FURIA 7-5 NiP",
+        "map": "Club House"
+    },
+    {
+        "opponent": "FaZe Clan",
+        "event": "Six Invitational 2025",
+        "date": "2025-02-23",
+        "score": "FURIA 0-2 FaZe",
+        "map": "Border, Chalet"
+    },
+    {
+        "opponent": "G2 Esports",
+        "event": "Six Invitational 2025",
+        "date": "2025-02-20",
+        "score": "FURIA 2-1 G2",
+        "map": "Villa, Kafe, Consulate"
+    },
+    {
+        "opponent": "Black Dragons",
+        "event": "BR6 2025 - Stage 1",
+        "date": "2025-04-10",
+        "score": "FURIA 8-7 BD",
+        "map": "Oregon"
+    }
+]

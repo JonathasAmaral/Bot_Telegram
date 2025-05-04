@@ -1,0 +1,23 @@
+[
+    {
+        "name": "ALGS 2025 Championship",
+        "date": "2025-03-01 to 2025-03-05",
+        "prize_pool": "$2,000,000",
+        "location": "Stockholm, Sweden",
+        "placement": "3rd Place"
+    },
+    {
+        "name": "ALGS 2024-25 Split 2 Playoffs",
+        "date": "2025-01-20 to 2025-01-25",
+        "prize_pool": "$1,000,000",
+        "location": "London, United Kingdom",
+        "placement": "2nd Place"
+    },
+    {
+        "name": "ALGS 2024-25 Split 1 Playoffs",
+        "date": "2024-09-10 to 2024-09-15",
+        "prize_pool": "$1,000,000",
+        "location": "Tokyo, Japan",
+        "placement": "4th Place"
+    }
+]

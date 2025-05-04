@@ -1,0 +1,30 @@
+[
+    {
+        "opponent": "Attack All Around",
+        "event": "Free Fire World Series 2025",
+        "date": "2025-04-26",
+        "score": "FURIA 25-32 AAA",
+        "map": "Bermuda, Kalahari, Purgatory"
+    },
+    {
+        "opponent": "LOUD",
+        "event": "LBFF - Liga Brasileira de Free Fire 2025 - Split 1 Final",
+        "date": "2025-03-25",
+        "score": "FURIA 2-3 LOUD",
+        "map": "Bermuda, Purgatory, Kalahari, Alpine, Bermuda"
+    },
+    {
+        "opponent": "Fluxo",
+        "event": "LBFF - Liga Brasileira de Free Fire 2025 - Split 1 Semifinal",
+        "date": "2025-03-20",
+        "score": "FURIA 3-1 FLX",
+        "map": "Bermuda, Kalahari, Purgatory, Alpine"
+    },
+    {
+        "opponent": "Corinthians",
+        "event": "Free Fire Continental Series 2024 Final",
+        "date": "2024-11-23",
+        "score": "FURIA 3-2 COR",
+        "map": "Bermuda, Kalahari, Purgatory, Alpine, Bermuda"
+    }
+]

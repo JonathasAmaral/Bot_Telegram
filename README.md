@@ -1,7 +1,6 @@
-
 # Telegram Bot
 
-Este projeto é um bot do Telegram desenvolvido com o objetivo de auxiliar no processo de aplicação da vaga para o time **FURIA**. A solução foi projetada para ser simples, eficiente e de alto desempenho.
+Este projeto é um bot do Telegram desenvolvido para fornecer informações atualizadas sobre a FURIA Esports. O bot utiliza a API oficial da PandaScore para garantir dados precisos e em tempo real sobre jogos, resultados e estatísticas.
 
 ## 🚀 Tecnologias e Ferramentas Utilizadas
 
@@ -11,9 +10,10 @@ Este projeto é um bot do Telegram desenvolvido com o objetivo de auxiliar no pr
 ### Bibliotecas
 - **[python-telegram-bot](https://python-telegram-bot.org/)**: Biblioteca oficial do Telegram para bots em Python.
   
-- **[FastAPI](https://fastapi.tiangolo.com/)**: Framework web de alto desempenho, utilizado em conjunto com:
-  - **Uvicorn**: Servidor ASGI.
-    
+- **[FastAPI](https://fastapi.tiangolo.com/)**: Framework web de alto desempenho.
+  
+- **[PandaScore API](https://developers.pandascore.co/)**: API oficial para dados de esports.
+  
 - **telegram.SecureValue**: Para manejar dados sensíveis (atualização futura).
 
 ### Arquitetura
@@ -28,46 +28,65 @@ Este projeto é um bot do Telegram desenvolvido com o objetivo de auxiliar no pr
 
 ## 🛠️ Configuração do Projeto
 
-### 1. Obtenção da Chave API do Bot no Telegram
-Para configurar o bot, é necessário obter uma chave API do Telegram. Siga os passos abaixo:
+### 1. Obtenção dos Tokens de API
 
+#### Token do Bot Telegram
 1. Abra o aplicativo do Telegram e procure pelo usuário `@BotFather`.
-   
 2. Inicie uma conversa com o `@BotFather` e envie o comando `/start`.
- 
 3. Para criar um novo bot, envie o comando `/newbot`.
-
 4. Siga as instruções e forneça um nome e um username para o bot.
+5. O `@BotFather` fornecerá uma **chave API**.
 
-5. O `@BotFather` fornecerá uma **chave API** após a criação do bot. Esta chave será necessária para configurar o projeto.
+#### Token da PandaScore
+1. Crie uma conta em [PandaScore](https://developers.pandascore.co/).
+2. No dashboard, acesse a seção de API tokens.
+3. Gere um novo token para seu projeto.
 
-**Atenção**: Mantenha a chave API privada e não a compartilhe publicamente.
+**Atenção**: Mantenha as chaves API privadas e não as compartilhe publicamente.
 
 ---
 
 ### 2. Clonando o Repositório
 
-1. Certifique-se de ter o **Git** instalado. Caso não tenha, siga as instruções de instalação no site oficial: [Git Downloads](https://git-scm.com/downloads).
+1. Certifique-se de ter o **Git** instalado.
    
-2. Abra um terminal ou prompt de comando e execute o seguinte comando para clonar o repositório:
-
+2. Execute o comando para clonar o repositório:
 ```bash
 git clone https://github.com/JonathasAmaral/Bot_Telegram.git
 ```
 
 3. Acesse o diretório do projeto:
-
 ```bash
 cd Bot_Telegram
 ```
 
+### 3. Configuração do Ambiente
+
+1. Crie o arquivo de configuração:
+   - Copie o arquivo `secret/config.txt` para `secret/config.json`
+   - Preencha os tokens necessários:
+     ```json
+     {
+         "BOT_TOKEN": "SEU_TOKEN_DO_TELEGRAM",
+         "WEBHOOK_URL": "https://{server_url}/api/webhook",
+         "PANDASCORE_TOKEN": "SEU_TOKEN_DA_PANDASCORE",
+         "DEBUG": false
+     }
+     ```
+
+2. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
+
 ---
 
-## 📋 Passos Futuros
+## 📋 Funcionalidades
 
-- Implementar o uso de `telegram.SecureValue` para gerenciar dados sensíveis.
-  
-- Realizar testes de stress utilizando **StresserTelegram** para validar a resiliência e desempenho do bot.
+- 🎮 Informações em tempo real dos times de CS:GO e Valorant
+- 📊 Estatísticas atualizadas via PandaScore API
+- 🗂️ Cache inteligente para otimizar requisições
+- 🔄 Atualizações automáticas de dados
 
 ---
 

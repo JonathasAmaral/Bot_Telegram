@@ -1,0 +1,26 @@
+[
+    {
+        "nickname": "HisWattson",
+        "name": "Jacob McMillin",
+        "nationality": "United States",
+        "role": "IGL",
+        "joined_date": "2023-04-15",
+        "image_url": "https://example.com/player_images/hiswattson.jpg"
+    },
+    {
+        "nickname": "xGn",
+        "name": "Mac Aigner",
+        "nationality": "United States",
+        "role": "Support",
+        "joined_date": "2023-06-20",
+        "image_url": "https://example.com/player_images/xgn.jpg"
+    },
+    {
+        "nickname": "Xeratricky",
+        "name": "Kevin Marenco",
+        "nationality": "United States",
+        "role": "Fragger",
+        "joined_date": "2023-06-20",
+        "image_url": "https://example.com/player_images/xeratricky.jpg"
+    }
+]

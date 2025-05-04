@@ -1,0 +1,30 @@
+[
+    {
+        "opponent": "KaBuM! e-Sports",
+        "event": "CBLOL 2025 - Split 1 Playoffs",
+        "date": "2025-04-20",
+        "score": "FURIA 3-1 KBM",
+        "map": "Summoner's Rift"
+    },
+    {
+        "opponent": "LOUD",
+        "event": "CBLOL 2025 - Split 1 Finals",
+        "date": "2025-04-27",
+        "score": "FURIA 2-3 LOUD",
+        "map": "Summoner's Rift"
+    },
+    {
+        "opponent": "paiN Gaming",
+        "event": "CBLOL 2025 - Split 1",
+        "date": "2025-03-15",
+        "score": "FURIA 1-0 PNG",
+        "map": "Summoner's Rift"
+    },
+    {
+        "opponent": "LOS",
+        "event": "CBLOL 2025 - Split 1",
+        "date": "2025-03-08",
+        "score": "FURIA 0-1 LOS",
+        "map": "Summoner's Rift"
+    }
+]

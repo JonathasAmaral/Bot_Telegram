@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ContextTypes
 from ....config.settings import URLS
 from ....config import logger
-from ...utils import create_keyboard, send_or_edit_message, scraper
+from ...utils import create_keyboard, send_or_edit_message, json_reader
 from .furia_handler import (
     show_games_menu,
     show_game_options,
@@ -59,9 +59,21 @@ async def callback_furia_refresh(update: Update, context: ContextTypes.DEFAULT_T
     game = query.split('_')[-1].upper()
     
     # Clear cache for this game's data
-    for key in list(scraper.cache.keys()):
-        if game.lower() in key.lower():
-            del scraper.cache[key]
+    json_reader.clear_cache(game.lower())
+    logger.info(f"Cache limpo para o jogo {game}")
     
-    # Show game menu again with fresh data
-    await show_game_options(update, context, game)
+    # Informar ao usuário sobre o script de atualização de dados
+    keyboard = create_keyboard([
+        ("🔄 Recarregar dados", f"furia_game_{game.lower()}"),
+        ("🔙 Voltar ao menu", f"furia_game_{game.lower()}")
+    ])
+    
+    await send_or_edit_message(
+        update,
+        context,
+        f"🔄 <b>Dados atualizados!</b>\n\n"
+        f"Os dados da FURIA {game} foram recarregados.\n\n",
+        f"\n",
+        keyboard,
+        parse_mode="HTML"
+    )

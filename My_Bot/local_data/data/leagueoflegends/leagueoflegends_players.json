@@ -1,0 +1,42 @@
+[
+    {
+        "nickname": "Robo",
+        "name": "Leonardo Souza",
+        "nationality": "Brazil",
+        "role": "Top Laner",
+        "joined_date": "2020-12-16",
+        "image_url": "https://example.com/player_images/robo.jpg"
+    },
+    {
+        "nickname": "Ranger",
+        "name": "Gabriel Carvalho",
+        "nationality": "Brazil",
+        "role": "Jungler",
+        "joined_date": "2022-11-30",
+        "image_url": "https://example.com/player_images/ranger.jpg"
+    },
+    {
+        "nickname": "Envy",
+        "name": "Thiago Alencar",
+        "nationality": "Brazil",
+        "role": "Mid Laner",
+        "joined_date": "2023-12-10",
+        "image_url": "https://example.com/player_images/envy.jpg"
+    },
+    {
+        "nickname": "Trigo",
+        "name": "Alexandre Machado",
+        "nationality": "Brazil",
+        "role": "Bot Laner",
+        "joined_date": "2021-12-15",
+        "image_url": "https://example.com/player_images/trigo.jpg"
+    },
+    {
+        "nickname": "RedBert",
+        "name": "Lucas Oliveira",
+        "nationality": "Brazil",
+        "role": "Support",
+        "joined_date": "2022-12-01",
+        "image_url": "https://example.com/player_images/redbert.jpg"
+    }
+]

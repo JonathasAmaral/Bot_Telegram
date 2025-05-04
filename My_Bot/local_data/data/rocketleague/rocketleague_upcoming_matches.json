@@ -1,0 +1,23 @@
+[
+    {
+        "opponent": "Team Secret",
+        "event": "RLCS 2025-26 - South American Regional 1",
+        "date": "2025-05-15",
+        "time": "17:00 BRT",
+        "format": "Bo5"
+    },
+    {
+        "opponent": "Fluxo",
+        "event": "RLCS 2025-26 - South American Regional 1",
+        "date": "2025-05-16",
+        "time": "19:00 BRT",
+        "format": "Bo5"
+    },
+    {
+        "opponent": "Cruzeiro Esports",
+        "event": "RLCS 2025-26 - South American Regional 1",
+        "date": "2025-05-17",
+        "time": "15:00 BRT",
+        "format": "Bo5"
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "opponent": "Team Liquid",
+        "event": "VCT Americas 2025",
+        "date": "10/04/2025",
+        "score": "2 - 0",
+        "map": "Pearl, Bind"
+    },
+    {
+        "opponent": "NRG",
+        "event": "VCT Americas 2025",
+        "date": "04/04/2025",
+        "score": "1 - 2",
+        "map": "Split, Icebox, Haven"
+    },
+    {
+        "opponent": "KRÜ Esports",
+        "event": "VCT Americas 2025",
+        "date": "20/03/2025",
+        "score": "2 - 1",
+        "map": "Lotus, Ascent, Bind"
+    },
+    {
+        "opponent": "Evil Geniuses",
+        "event": "VCT Americas 2025",
+        "date": "15/03/2025",
+        "score": "2 - 0",
+        "map": "Ascent, Lotus"
+    },
+    {
+        "opponent": "LOUD",
+        "event": "VCT Americas 2025",
+        "date": "08/03/2025",
+        "score": "0 - 2",
+        "map": "Pearl, Icebox"
+    }
+]

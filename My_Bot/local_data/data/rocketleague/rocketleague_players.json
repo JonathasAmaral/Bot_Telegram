@@ -1,0 +1,26 @@
+[
+    {
+        "nickname": "CaioTG1",
+        "name": "Caio Alves",
+        "nationality": "Brazil",
+        "role": "Player",
+        "joined_date": "2020-06-18",
+        "image_url": "https://example.com/player_images/caiotg1.jpg"
+    },
+    {
+        "nickname": "yanxnz",
+        "name": "Yan Xisto",
+        "nationality": "Brazil",
+        "role": "Player",
+        "joined_date": "2021-01-10",
+        "image_url": "https://example.com/player_images/yanxnz.jpg"
+    },
+    {
+        "nickname": "AcroniK",
+        "name": "Gabriel Lalli",
+        "nationality": "Brazil",
+        "role": "Player",
+        "joined_date": "2022-07-23",
+        "image_url": "https://example.com/player_images/acronik.jpg"
+    }
+]

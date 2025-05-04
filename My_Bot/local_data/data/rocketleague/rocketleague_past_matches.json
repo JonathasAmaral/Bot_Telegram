@@ -1,0 +1,30 @@
+[
+    {
+        "opponent": "Complexity",
+        "event": "RLCS 2024-25 World Championship",
+        "date": "2025-03-15",
+        "score": "FURIA 1-3 COL",
+        "map": "Neo Tokyo, Utopia Coliseum, Champions Field, Wasteland"
+    },
+    {
+        "opponent": "Team BDS",
+        "event": "RLCS 2024-25 World Championship",
+        "date": "2025-03-14",
+        "score": "FURIA 3-2 BDS",
+        "map": "DFH Stadium, Mannfield, Champions Field, Forbidden Temple, Neo Tokyo"
+    },
+    {
+        "opponent": "KRÜ Esports",
+        "event": "RLCS 2024-25 - South American Major",
+        "date": "2025-02-10",
+        "score": "FURIA 4-1 KRÜ",
+        "map": "Champions Field, Wasteland, Neo Tokyo, Utopia Coliseum, Aquadome"
+    },
+    {
+        "opponent": "TRUE Neutral",
+        "event": "RLCS 2024-25 - South American Regional 3",
+        "date": "2025-01-12",
+        "score": "FURIA 4-2 TN",
+        "map": "Urban Central, Champions Field, Mannfield, Neo Tokyo, Utopia Coliseum, Wasteland"
+    }
+]

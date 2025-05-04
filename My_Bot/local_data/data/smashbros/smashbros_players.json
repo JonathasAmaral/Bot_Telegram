@@ -1,0 +1,18 @@
+[
+    {
+        "nickname": "Kurama",
+        "name": "Pedro Almeida",
+        "nationality": "Brazil",
+        "role": "Player - Mario/Luigi Main",
+        "joined_date": "2022-02-20",
+        "image_url": "https://example.com/player_images/kurama.jpg"
+    },
+    {
+        "nickname": "Jajao",
+        "name": "João Pedro Silva",
+        "nationality": "Brazil",
+        "role": "Player - Cloud/Link Main",
+        "joined_date": "2022-09-15",
+        "image_url": "https://example.com/player_images/jajao.jpg"
+    }
+]

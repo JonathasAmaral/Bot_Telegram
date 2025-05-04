@@ -1,0 +1,23 @@
+[
+    {
+        "opponent": "Sentinels",
+        "event": "Valorant Champions Tour 2025",
+        "date": "12/05/2025",
+        "time": "20:00 UTC",
+        "format": "BO3"
+    },
+    {
+        "opponent": "Cloud9",
+        "event": "Valorant Champions Tour 2025",
+        "date": "20/05/2025",
+        "time": "17:00 UTC",
+        "format": "BO3"
+    },
+    {
+        "opponent": "100 Thieves",
+        "event": "Valorant Masters São Paulo",
+        "date": "06/06/2025",
+        "time": "19:30 UTC",
+        "format": "BO3"
+    }
+]

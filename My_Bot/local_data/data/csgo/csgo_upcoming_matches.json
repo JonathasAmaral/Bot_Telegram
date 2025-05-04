@@ -1,0 +1,30 @@
+[
+    {
+        "opponent": "MIBR",
+        "event": "BLAST Premier: Spring Finals 2025",
+        "date": "15/05/2025",
+        "time": "15:00 UTC",
+        "format": "BO3"
+    },
+    {
+        "opponent": "Astralis",
+        "event": "ESL Pro League Season 24",
+        "date": "27/05/2025",
+        "time": "18:30 UTC",
+        "format": "BO3"
+    },
+    {
+        "opponent": "Natus Vincere",
+        "event": "ESL Pro League Season 24",
+        "date": "02/06/2025",
+        "time": "12:00 UTC",
+        "format": "BO3"
+    },
+    {
+        "opponent": "G2 Esports",
+        "event": "ESL Pro League Season 24",
+        "date": "10/06/2025",
+        "time": "19:00 UTC",
+        "format": "BO3"
+    }
+]

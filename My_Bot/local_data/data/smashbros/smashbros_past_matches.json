@@ -1,0 +1,30 @@
+[
+    {
+        "opponent": "MKLeo",
+        "event": "Evolution Championship Series 2025",
+        "date": "2025-03-03",
+        "score": "FURIA 1-3 MKLeo",
+        "map": "Final Destination, Battlefield, Smashville, Town & City"
+    },
+    {
+        "opponent": "Tweek",
+        "event": "Smash World Tour 2024 Championship",
+        "date": "2024-12-11",
+        "score": "FURIA 0-3 Tweek",
+        "map": "Battlefield, Final Destination, Pokémon Stadium 2"
+    },
+    {
+        "opponent": "Glutonny",
+        "event": "Ultimate Fighting Arena 2024",
+        "date": "2024-10-06",
+        "score": "FURIA 2-3 Glutonny",
+        "map": "Small Battlefield, Hollow Bastion, Battlefield, Final Destination, Smashville"
+    },
+    {
+        "opponent": "Light",
+        "event": "Smash Factor 9",
+        "date": "2024-08-15",
+        "score": "FURIA 3-2 Light",
+        "map": "Battlefield, Final Destination, Town & City, Smashville, Pokémon Stadium 2"
+    }
+]

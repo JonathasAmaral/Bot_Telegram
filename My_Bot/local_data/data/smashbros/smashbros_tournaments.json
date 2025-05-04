@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Evolution Championship Series 2025",
+        "date": "2025-03-01 to 2025-03-03",
+        "prize_pool": "$50,000",
+        "location": "Las Vegas, USA",
+        "placement": "5th-8th Place"
+    },
+    {
+        "name": "Smash World Tour 2024 Championship",
+        "date": "2024-12-10 to 2024-12-12",
+        "prize_pool": "$100,000",
+        "location": "Los Angeles, USA",
+        "placement": "9th-12th Place"
+    },
+    {
+        "name": "Ultimate Fighting Arena 2024",
+        "date": "2024-10-05 to 2024-10-06",
+        "prize_pool": "€10,000",
+        "location": "Paris, France",
+        "placement": "4th Place"
+    }
+]
