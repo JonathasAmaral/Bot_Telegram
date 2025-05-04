@@ -72,8 +72,7 @@ async def callback_furia_refresh(update: Update, context: ContextTypes.DEFAULT_T
         update,
         context,
         f"🔄 <b>Dados atualizados!</b>\n\n"
-        f"Os dados da FURIA {game} foram recarregados.\n\n",
-        f"\n",
+        f"Os dados da FURIA {game} foram recarregados.",
         keyboard,
         parse_mode="HTML"
     )

@@ -12,8 +12,6 @@ Este projeto é um bot do Telegram desenvolvido para fornecer informações atua
   
 - **[FastAPI](https://fastapi.tiangolo.com/)**: Framework web de alto desempenho.
   
-- **[PandaScore API](https://developers.pandascore.co/)**: API oficial para dados de esports.
-  
 - **telegram.SecureValue**: Para manejar dados sensíveis (atualização futura).
 
 ### Arquitetura
