@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Request, Response, HTTPException
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from telegram import Update
 from telegram.ext import Application
 from .app_state import get_application
@@ -11,6 +11,11 @@ from pathlib import Path
 from config import BOT_TOKEN, WEBHOOK_URL, BASE_DIR, logger
 
 router = APIRouter()
+
+# Health check endpoint para a rota raiz
+@router.get("/")
+async def root_health_check():
+    return JSONResponse({"status": "ok", "message": "Bot is running"})
 
 # Rota para servir arquivos estáticos
 @router.get("/api/assets/{folder}/{subfolder}/{filename}")
