@@ -8,6 +8,9 @@ from reportlab.lib.utils import ImageReader
 import datetime
 import os
 
+# Base directory for relative paths
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Using absolute import instead of relative import
 from api.assets.fan_wallet import ASSETS_DIR, FAN_WALLET_DIR
 
@@ -15,6 +18,20 @@ from api.assets.fan_wallet import ASSETS_DIR, FAN_WALLET_DIR
 if 'ASSETS_DIR' not in locals() or 'FAN_WALLET_DIR' not in locals():
     ASSETS_DIR = Path(__file__).resolve().parent.parent.parent / "assets"
     FAN_WALLET_DIR = ASSETS_DIR / "fan_wallet"
+
+# Font paths
+FONTS_DIR = os.path.join(os.path.dirname(BASE_DIR), "..", "assets", "fonts")
+REGULAR_FONT_PATH = os.path.join(FONTS_DIR, "Roboto-Regular.ttf")
+BOLD_FONT_PATH = os.path.join(FONTS_DIR, "Roboto-Bold.ttf")
+
+# Font sizes
+FONT_SIZES = {
+    "title": 38,
+    "subtitle": 36,
+    "label": 24,
+    "value": 28,
+    "small": 20
+}
 
 TEMPLATE_PATH = FAN_WALLET_DIR / "template.png"
 LOGO_PATH = FAN_WALLET_DIR / "logo_carterinha.png"
@@ -31,12 +48,25 @@ def ensure_fan_wallet_dir():
 
 def load_fonts():
     try:
+<<<<<<< HEAD
         default_font = ImageFont.truetype("arial.ttf", 36)
         title_font = ImageFont.truetype("arial.ttf", 45)  # Aumentado para melhor proporção
         info_font = ImageFont.truetype("arial.ttf", 28)
         small_font = ImageFont.truetype("arial.ttf", 20)
         return title_font, default_font, info_font, small_font
     except Exception:
+=======
+        # Usar fontes específicas com tamanhos definidos
+        title_font = ImageFont.truetype(BOLD_FONT_PATH, FONT_SIZES["title"])
+        default_font = ImageFont.truetype(REGULAR_FONT_PATH, FONT_SIZES["subtitle"])
+        info_font = ImageFont.truetype(REGULAR_FONT_PATH, FONT_SIZES["value"])
+        small_font = ImageFont.truetype(REGULAR_FONT_PATH, FONT_SIZES["small"])
+        
+        return title_font, default_font, info_font, small_font
+    except Exception as e:
+        # Fallback seguro - mas log do erro para diagnóstico
+        print(f"Erro ao carregar fontes: {e}. Caminho das fontes: {REGULAR_FONT_PATH}, {BOLD_FONT_PATH}")
+>>>>>>> 6ab730e (Ajuste do Desing da Carteira e Adição de fonts)
         return ImageFont.load_default(), ImageFont.load_default(), ImageFont.load_default(), ImageFont.load_default()
 
 def add_rounded_corners(image, radius):
@@ -178,17 +208,23 @@ def generate_fan_wallet_image(user_data):
     
     title_font, default_font, info_font, small_font = load_fonts()
     
-    # Título com efeito de sombra
+    # Título sem efeito de sombra
     margin_left = int(CARD_WIDTH * 0.06)
-    title_y = int(CARD_HEIGHT * 0.08)
+    title_y = int(CARD_HEIGHT * 0.05)
     
     # Primeiro título - CARTEIRA DE FÃ
+<<<<<<< HEAD
     draw.text((margin_left+2, title_y+2), "CARTEIRA DE FÃ", fill=(30, 30, 30), font=title_font)
+=======
+>>>>>>> 6ab730e (Ajuste do Desing da Carteira e Adição de fonts)
     draw.text((margin_left, title_y), "CARTEIRA DE FÃ", fill=FURIA_BLACK, font=title_font)
     
     # Segundo título - FURIA ESPORTS 
     title_y += title_font.getbbox("CARTEIRA DE FÃ")[3] + 10  # Espaço entre os títulos
+<<<<<<< HEAD
     draw.text((margin_left+2, title_y+2), "FURIA ESPORTS", fill=(30, 30, 30), font=title_font)
+=======
+>>>>>>> 6ab730e (Ajuste do Desing da Carteira e Adição de fonts)
     draw.text((margin_left, title_y), "FURIA ESPORTS", fill=TEXT_COLOR, font=title_font)
     
     # Informações do usuário
