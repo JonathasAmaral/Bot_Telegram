@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-from ....config import logger
-from ...utils import create_keyboard, send_or_edit_message
+from config import logger
+from utils import create_keyboard, send_or_edit_message
 from .start_handler import show_main_menu
 
 async def callback_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -41,4 +41,3 @@ async def callback_sobre(update: Update, context: ContextTypes.DEFAULT_TYPE):
         keyboard,
         parse_mode="HTML"
     )
-      

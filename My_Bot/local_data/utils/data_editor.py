@@ -1,8 +1,12 @@
 # Classes para edição de tipos específicos de dados da FURIA
 
 import logging
+import os
 from datetime import datetime
+from pathlib import Path
 from typing import Dict, List, Any, Optional, Union
+
+# Import usando caminho relativo para compatibilidade com o ambiente existente
 from .json_manager import JsonManager
 
 # Configure logging
@@ -13,14 +17,14 @@ class BaseEditor:
     """Classe base para editores de dados"""
     
     def __init__(self, json_manager: JsonManager, game: str, data_type: str):
-      
+
         self.json_manager = json_manager
         self.game = game
         self.data_type = data_type
         self.data = None
         
     def load(self) -> bool:
-       
+
         self.data = self.json_manager.load(self.game, self.data_type)
         if self.data is None:
             # Se não conseguir carregar, inicializa com dados padrão
@@ -28,7 +32,7 @@ class BaseEditor:
         return self.data is not None
     
     def save(self) -> bool:
-       
+
         if self.data is None:
             logger.error("Tentativa de salvar dados que não foram carregados")
             return False
@@ -87,13 +91,13 @@ class PlayersEditor(BaseEditor):
         self.data = []
     
     def get_players(self) -> List[Dict]:
-        
+
         if not self.data:
             return []
         return self.data
     
     def add_player(self, player_data: Dict) -> bool:
-       
+
         # Gerar ID para o novo jogador se não estiver definido
         if "id" not in player_data:
             next_id = len(self.data) + 101  # Para csgo começa em 101, valorant em 201
@@ -106,7 +110,7 @@ class PlayersEditor(BaseEditor):
         return True
     
     def update_player(self, index: int, player_data: Dict) -> bool:
-        
+
         if 0 <= index < len(self.data):
             # Preservar ID original
             original_id = self.data[index]["id"]
@@ -120,7 +124,8 @@ class PlayersEditor(BaseEditor):
             return False
     
     def remove_player(self, index: int) -> Optional[Dict]:
-       
+        # Remove um jogador da lista
+
         if 0 <= index < len(self.data):
             removed_player = self.data.pop(index)
             logger.info(f"Jogador {removed_player.get('nickname')} removido com sucesso")
@@ -134,19 +139,19 @@ class MatchesEditor(BaseEditor):
     """Classe base para editores de partidas"""
     
     def get_matches(self) -> List[Dict]:
-        
+        # Obtém a lista de partidas
         if not self.data:
             return []
         return self.data
     
     def add_match(self, match_data: Dict) -> bool:
-        
+
         self.data.append(match_data)
         logger.info(f"Partida contra {match_data.get('opponent')} adicionada com sucesso")
         return True
     
     def update_match(self, index: int, match_data: Dict) -> bool:
-        
+
         if 0 <= index < len(self.data):
             self.data[index] = match_data
             logger.info(f"Partida contra {match_data.get('opponent')} atualizada com sucesso")
@@ -156,7 +161,7 @@ class MatchesEditor(BaseEditor):
             return False
     
     def remove_match(self, index: int) -> Optional[Dict]:
-        
+
         if 0 <= index < len(self.data):
             removed_match = self.data.pop(index)
             logger.info(f"Partida contra {removed_match.get('opponent')} removida com sucesso")
@@ -171,6 +176,7 @@ class MatchesEditor(BaseEditor):
 
 
 class UpcomingMatchesEditor(MatchesEditor):
+    # Editor para partidas futuras
     
     def __init__(self, json_manager: JsonManager, game: str):
         super().__init__(json_manager, game, "upcoming_matches")
@@ -188,23 +194,22 @@ class TournamentsEditor(BaseEditor):
         super().__init__(json_manager, game, "tournaments")
     
     def _init_default_data(self):
-
         self.data = []
     
     def get_tournaments(self) -> List[Dict]:
-        
+
         if not self.data:
             return []
         return self.data
     
     def add_tournament(self, tournament_data: Dict) -> bool:
-        
+
         self.data.append(tournament_data)
         logger.info(f"Torneio {tournament_data.get('name')} adicionado com sucesso")
         return True
     
     def update_tournament(self, index: int, tournament_data: Dict) -> bool:
-        
+
         if 0 <= index < len(self.data):
             self.data[index] = tournament_data
             logger.info(f"Torneio {tournament_data.get('name')} atualizado com sucesso")
@@ -214,7 +219,7 @@ class TournamentsEditor(BaseEditor):
             return False
     
     def remove_tournament(self, index: int) -> Optional[Dict]:
-        
+
         if 0 <= index < len(self.data):
             removed_tournament = self.data.pop(index)
             logger.info(f"Torneio {removed_tournament.get('name')} removido com sucesso")

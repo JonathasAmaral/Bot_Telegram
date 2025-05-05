@@ -1,7 +1,8 @@
 from telegram import Update
 from telegram.ext import ContextTypes
+import asyncio
+from config import logger
 from .fan_wallet_handler import show_fan_wallet_menu, send_fan_wallet_image, send_fan_wallet_pdf
-from ....config import logger
 
 async def callback_fan_wallet(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Mostra o menu de carteira de fã 

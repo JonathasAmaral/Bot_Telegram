@@ -1,7 +1,6 @@
 from telegram.ext import ApplicationBuilder
 from telegram import BotCommand, MenuButtonCommands
-from webhook.token import BOT_TOKEN, WEBHOOK_URL
-from api.config import logger
+from config import BOT_TOKEN, WEBHOOK_URL, logger
 from .handlers.commands import register_handlers
 import os
 

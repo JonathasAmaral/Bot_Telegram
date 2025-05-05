@@ -6,9 +6,16 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A6
 from reportlab.lib.utils import ImageReader
 import datetime
+import os
 
-ASSETS_DIR = Path(__file__).resolve().parent.parent.parent / "assets"
-FAN_WALLET_DIR = ASSETS_DIR / "fan_wallet"
+# Using absolute import instead of relative import
+from api.assets.fan_wallet import ASSETS_DIR, FAN_WALLET_DIR
+
+# Definição de fallback caso a importação direta falhe
+if 'ASSETS_DIR' not in locals() or 'FAN_WALLET_DIR' not in locals():
+    ASSETS_DIR = Path(__file__).resolve().parent.parent.parent / "assets"
+    FAN_WALLET_DIR = ASSETS_DIR / "fan_wallet"
+
 TEMPLATE_PATH = FAN_WALLET_DIR / "template.png"
 LOGO_PATH = FAN_WALLET_DIR / "logo_carterinha.png"
 FURIA_BLUE = (29, 29, 30)

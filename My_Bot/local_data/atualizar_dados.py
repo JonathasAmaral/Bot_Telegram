@@ -9,7 +9,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-# Importar classes da pasta utils
+# Importar classes do diretório de utils com caminhos relativos simples
 from utils.json_manager import JsonManager
 from utils.data_editor import (
     TeamEditor, 

@@ -6,14 +6,13 @@ import sys
 from fastapi import FastAPI
 from telegram.ext import Application
 
-from api.bot import create_bot
-from webhook.routes import router
-from webhook.token import WEBHOOK_URL
-from webhook.app_state import set_application
-
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "api", "bot"))
 
-logger = logging.getLogger("telegram-bot")
+from api.bot import create_bot
+from config import BOT_TOKEN, WEBHOOK_URL, logger
+from webhook.routes import router
+from webhook.app_state import set_application
 
 app = FastAPI()
 

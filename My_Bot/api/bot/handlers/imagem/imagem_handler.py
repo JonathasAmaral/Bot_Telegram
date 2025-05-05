@@ -1,8 +1,8 @@
-from telegram import Update
+from telegram import Update, InputMediaPhoto
 from telegram.ext import ContextTypes
 from pathlib import Path
-from ....config import logger
-from ...utils import create_keyboard, send_message, send_or_edit_message, send_image
+from config import logger
+from utils import create_keyboard, send_message, send_or_edit_message, send_image
 
 # Updated path to point to the correct images directory
 IMAGES_DIR = Path(__file__).resolve().parent.parent.parent.parent / "assets" / "images"
@@ -24,7 +24,7 @@ async def cmd_imagem(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await show_imagens_menu(update, context)
 
 async def show_imagens_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # Mostra o menu de imagens"""
+    
     ensure_images_dir()
     
     keyboard = create_keyboard([

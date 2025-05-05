@@ -6,8 +6,11 @@ from typing import Dict, List, Any, Optional
 
 logger = logging.getLogger("telegram-bot")
 
-# Base path to local data files
-BASE_DATA_PATH = Path(__file__).resolve().parent.parent.parent.parent / "local_data" / "data"
+from My_Bot.local_data.data import BASE_DATA_PATH
+
+if 'BASE_DATA_PATH' not in locals():
+    BASE_DATA_PATH = Path(__file__).resolve().parent.parent.parent.parent / "local_data" / "data"
+
 logger.info(f"Diretório base de dados: {BASE_DATA_PATH}")
 
 class JsonDataReader:

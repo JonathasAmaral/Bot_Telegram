@@ -126,11 +126,15 @@ My_Bot/
 │   │   │   ├── furia/
 │   │   │   ├── imagem/
 │   │   │   └── start/
-│   │   └── utils/         # Utilitários
+│   │   └── utils/         # Utilitários do bot (a ser modularizado)
 │   │       ├── keyboard.py
 │   │       ├── leitor_json.py  # Leitor de dados em JSON
 │   │       ├── fan_wallet_generator.py # Gerador de carteira de fã
 │   │       └── message.py
+├── config/                # Configurações modularizadas ✅
+│   ├── config.py
+│   ├── token.py
+│   └── __init__.py
 ├── local_data/            # Dados locais em JSON
 │   ├── data/              # Pasta com dados organizados por jogo
 │   │   ├── apexlegends/   # Apex Legends
@@ -142,7 +146,7 @@ My_Bot/
 │   │   ├── rocketleague/  # Rocket League
 │   │   ├── smashbros/     # Super Smash Bros. Ultimate
 │   │   └── valorant/      # VALORANT
-│   ├── utils/             # Utilitários para gerenciamento de dados
+│   ├── utils/             # Utilitários para gerenciamento de dados (a ser modularizado)
 │   └── atualizar_dados.py # Script para atualizar dados
 ├── secret/                # Armazenamento seguro de credenciais (local)
 │   └── config.json
@@ -151,9 +155,8 @@ My_Bot/
 │   └── teste_simple_json.py # Teste simples de arquivos JSON
 ├── webhook/               # Configuração de webhook
 │   ├── app_state.py
-│   ├── config.py
 │   ├── routes.py
-│   └── token.py
+│   └── __init__.py
 ├── main.py                # Ponto de entrada principal
 ├── requirements.txt       # Dependências do projeto
 └── README.md
@@ -211,3 +214,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir um Pull Request.
 3. Certifique-se de que todos os testes estão passando antes de enviar um Pull Request
 4. Nunca inclua credenciais ou tokens nos commits
 5. Atualize o README.md quando adicionar novas funcionalidades
+
+## Futuras Atualizações
+
+- **Modularização de Configurações**: Planejamos mover as configurações para uma pasta dedicada, como `config/`, para melhorar a modularização e organização do código. Isso permitirá uma separação mais clara entre lógica de aplicação e configurações, facilitando a manutenção e escalabilidade do projeto.

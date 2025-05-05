@@ -7,15 +7,14 @@ from .app_state import get_application
 import os
 from pathlib import Path
 
-router = APIRouter()
+# Import from the new centralized configuration
+from config import BOT_TOKEN, WEBHOOK_URL, BASE_DIR, logger
 
-# Caminho base para a pasta My_Bot
-BASE_DIR = Path(__file__).resolve().parent.parent
+router = APIRouter()
 
 # Rota para servir arquivos estáticos
 @router.get("/api/assets/{folder}/{subfolder}/{filename}")
 async def serve_assets(folder: str, subfolder: str, filename: str):
-
     file_path = BASE_DIR / "api" / "assets" / folder / subfolder / filename
     if os.path.exists(file_path):
         return FileResponse(file_path)

@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-from ....config import logger
-from ...utils import create_keyboard, send_or_edit_message, json_reader
+from config import logger
+from utils import create_keyboard, send_or_edit_message, json_reader
 
 async def cmd_furia(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handler para o comando /furia - mostra o menu de jogos da FURIA"""

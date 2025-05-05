@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-from ....config import logger
-from ...utils import create_keyboard, send_or_edit_message, json_reader
+from config import logger
+from utils import create_keyboard, send_or_edit_message, json_reader
 from .furia_handler import (
     show_games_menu,
     show_game_options,

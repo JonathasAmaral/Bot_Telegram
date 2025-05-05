@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-from ....config import logger
-from ...utils import create_keyboard, send_or_edit_message
+from config import logger
+from utils import create_keyboard, send_or_edit_message
 from .imagem_handler import IMAGE_PATHS, show_imagens_menu
 
 async def callback_imagens(update: Update, context: ContextTypes.DEFAULT_TYPE):

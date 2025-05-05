@@ -1,8 +1,8 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ContextTypes
-from ....config import logger
-from ...utils import create_keyboard, send_message, send_or_edit_message
-from ...utils.fan_wallet_generator import generate_fan_wallet_image, generate_fan_wallet_pdf
+from config import logger
+from utils import create_keyboard, send_message, send_or_edit_message
+from utils import generate_fan_wallet_image, generate_fan_wallet_pdf
 
 async def cmd_fan_wallet(update: Update, context: ContextTypes.DEFAULT_TYPE):
     #Handler para o comando /fan_wallet
