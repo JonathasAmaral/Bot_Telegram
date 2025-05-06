@@ -13,8 +13,8 @@ from config import BOT_TOKEN, WEBHOOK_URL, BASE_DIR, logger
 router = APIRouter()
 
 # Health check endpoint para a rota raiz
-@router.get("/")
-async def root_health_check():
+@router.api_route("/", methods=["GET", "HEAD"], include_in_schema=False)
+async def health_check():
     return JSONResponse({"status": "ok", "message": "Bot is running"})
 
 # Rota para servir arquivos estáticos

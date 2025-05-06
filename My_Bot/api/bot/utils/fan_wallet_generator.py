@@ -48,14 +48,6 @@ def ensure_fan_wallet_dir():
 
 def load_fonts():
     try:
-<<<<<<< HEAD
-        default_font = ImageFont.truetype("arial.ttf", 36)
-        title_font = ImageFont.truetype("arial.ttf", 45)  # Aumentado para melhor proporção
-        info_font = ImageFont.truetype("arial.ttf", 28)
-        small_font = ImageFont.truetype("arial.ttf", 20)
-        return title_font, default_font, info_font, small_font
-    except Exception:
-=======
         # Usar fontes específicas com tamanhos definidos
         title_font = ImageFont.truetype(BOLD_FONT_PATH, FONT_SIZES["title"])
         default_font = ImageFont.truetype(REGULAR_FONT_PATH, FONT_SIZES["subtitle"])
@@ -66,7 +58,6 @@ def load_fonts():
     except Exception as e:
         # Fallback seguro - mas log do erro para diagnóstico
         print(f"Erro ao carregar fontes: {e}. Caminho das fontes: {REGULAR_FONT_PATH}, {BOLD_FONT_PATH}")
->>>>>>> 6ab730e (Ajuste do Desing da Carteira e Adição de fonts)
         return ImageFont.load_default(), ImageFont.load_default(), ImageFont.load_default(), ImageFont.load_default()
 
 def add_rounded_corners(image, radius):
@@ -198,7 +189,8 @@ def generate_fan_wallet_image(user_data):
     if TEMPLATE_PATH.exists():
         template = Image.open(TEMPLATE_PATH).resize((CARD_WIDTH, CARD_HEIGHT))
     else:
-        template = Image.new('RGB', (CARD_WIDTH, CARD_HEIGHT))
+        # Se o template não existir, cria uma imagem preta como fallback
+        template = Image.new('RGB', (CARD_WIDTH, CARD_HEIGHT), (0, 0, 0))
     
     template = add_card_background(template)
     
@@ -213,18 +205,10 @@ def generate_fan_wallet_image(user_data):
     title_y = int(CARD_HEIGHT * 0.05)
     
     # Primeiro título - CARTEIRA DE FÃ
-<<<<<<< HEAD
-    draw.text((margin_left+2, title_y+2), "CARTEIRA DE FÃ", fill=(30, 30, 30), font=title_font)
-=======
->>>>>>> 6ab730e (Ajuste do Desing da Carteira e Adição de fonts)
     draw.text((margin_left, title_y), "CARTEIRA DE FÃ", fill=FURIA_BLACK, font=title_font)
     
     # Segundo título - FURIA ESPORTS 
     title_y += title_font.getbbox("CARTEIRA DE FÃ")[3] + 10  # Espaço entre os títulos
-<<<<<<< HEAD
-    draw.text((margin_left+2, title_y+2), "FURIA ESPORTS", fill=(30, 30, 30), font=title_font)
-=======
->>>>>>> 6ab730e (Ajuste do Desing da Carteira e Adição de fonts)
     draw.text((margin_left, title_y), "FURIA ESPORTS", fill=TEXT_COLOR, font=title_font)
     
     # Informações do usuário
@@ -240,7 +224,7 @@ def generate_fan_wallet_image(user_data):
     template = template.convert('RGB')
     
     img_byte_array = io.BytesIO()
-    template.save(img_byte_array, format='PNG')
+    template.save(img_byte_array, format='PNG', quality=95)  # Alta qualidade para PNG
     img_byte_array.seek(0)
     
     return img_byte_array

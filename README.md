@@ -17,7 +17,7 @@ Este projeto é um bot do Telegram desenvolvido para fornecer informações atua
 ### Arquitetura
 - **Webhooks**: Utilizado para melhor desempenho e eficiência no uso de recursos.
   
-- **Servidor**: Implantação no serviço de hosting **render**.
+- **Servidor**: Implantação no serviço de hosting **Render**.
 
 ### Testes de Stress
 - **StresserTelegram**: Ferramenta utilizada para testar a resiliência do bot sob alta carga.
@@ -34,11 +34,6 @@ Este projeto é um bot do Telegram desenvolvido para fornecer informações atua
 3. Para criar um novo bot, envie o comando `/newbot`.
 4. Siga as instruções e forneça um nome e um username para o bot.
 5. O `@BotFather` fornecerá uma **chave API**.
-
-#### Token da PandaScore
-1. Crie uma conta em [PandaScore](https://developers.pandascore.co/).
-2. No dashboard, acesse a seção de API tokens.
-3. Gere um novo token para seu projeto.
 
 **Atenção**: Mantenha as chaves API privadas e não as compartilhe publicamente.
 
@@ -67,7 +62,6 @@ cd Bot_Telegram
      {
          "BOT_TOKEN": "SEU_TOKEN_DO_TELEGRAM",
          "WEBHOOK_URL": "https://{server_url}/api/webhook",
-         "PANDASCORE_TOKEN": "SEU_TOKEN_DA_PANDASCORE",
          "DEBUG": false
      }
      ```
@@ -76,17 +70,6 @@ cd Bot_Telegram
 ```bash
 pip install -r requirements.txt
 ```
-
----
-
-## 📋 Funcionalidades
-
-- 🎮 Informações em tempo real dos times de CS:GO e Valorant
-- 📊 Estatísticas atualizadas via PandaScore API
-- 🗂️ Cache inteligente para otimizar requisições
-- 🔄 Atualizações automáticas de dados
-
----
 
 ## 🤝 Contribuição
 

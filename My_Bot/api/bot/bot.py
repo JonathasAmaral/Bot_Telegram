@@ -16,7 +16,7 @@ async def create_bot():
         BotCommand("start", "menu principal"),
         BotCommand("furia", "jogos da FURIA"),
         BotCommand("imagem", "imagens e wallpapers"),
-        BotCommand("fan_wallet", "Carterinha de fãn")
+        BotCommand("fan_wallet", "Carterinha de fã")
     ]
     await application.bot.set_my_commands(commands)
     

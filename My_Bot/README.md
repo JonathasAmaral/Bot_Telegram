@@ -217,4 +217,5 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir um Pull Request.
 
 ## Futuras Atualizações
 
-- **Modularização de Configurações**: Planejamos mover as configurações para uma pasta dedicada, como `config/`, para melhorar a modularização e organização do código. Isso permitirá uma separação mais clara entre lógica de aplicação e configurações, facilitando a manutenção e escalabilidade do projeto.
+- **Modularização de Utils**: Precisamos consolidar as pastas de utilitários (`api/bot/utils` e `local_data/utils`) em uma única pasta `utils/` na raiz do projeto. Isso melhorará a organização do código, evitará duplicação de funções e facilitará a manutenção.
+- ~~**Modularização de Configurações**: Planejamos mover as configurações para uma pasta dedicada, como `config/`, para melhorar a modularização e organização do código. Isso permitirá uma separação mais clara entre lógica de aplicação e configurações, facilitando a manutenção e escalabilidade do projeto.~~ ✅ **Implementado**
